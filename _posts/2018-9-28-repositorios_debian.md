@@ -3,7 +3,7 @@ layout: post
 title: CONFIGURAR REOSITORIOS EN Linux Debian 9
 ---
 
-Modificar contenido del fichero sources.list
+*Modificar contenido del fichero sources.list*
     
     nano /etc/apt/sources.list
 
