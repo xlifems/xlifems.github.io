@@ -11,7 +11,7 @@ Configuración de repositorios en Linux debian 9
 
     deb http://mirrors.kernel.org/debian/ stretch main contrib non-free
 
-# jessie-actualizaciones-seguridad   
+* jessie-actualizaciones-seguridad   
    
     deb http://security.debian.org/ stretch/updates main contrib non-free
 
