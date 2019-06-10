@@ -6,7 +6,7 @@ title: Instalar Apache Maven desde repositorios oficiales en Linux Depin
 
 *Instalacion apache maven en Linux deppin 15*
 
-Descargar apache-maven-3.6.1-bin.tar.gz binary archive desde link ofical: Download Apache Maven. y descomprimir en donde querramos
+Descargar apache-maven-3.6.1-bin.tar.gz binary archive desde link ofical: https://maven.apache.org/download.cgi/[Download Apache Maven.] y descomprimir en donde querramos
 para este caso en /opt
 
    cd /opt
