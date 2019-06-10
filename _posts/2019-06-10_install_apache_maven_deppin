@@ -1,0 +1,44 @@
+---
+layout: post
+title: Instalar Apache Maven desde repositorios oficiales en Linux Depin
+---
+
+
+*Instalacion apache maven en Linux deppin 15*
+
+Descargar apache-maven-3.6.1-bin.tar.gz binary archive desde link ofical: Download Apache Maven. y descomprimir en donde querramos
+para este caso en /opt
+
+   cd /opt
+   sudo tar -xvzf ~/Downloads/apache-maven-3.6.1-bin.tar.gz
+
+Ejecutamos los siguientes comando para actualizar si es necesario
+
+   sudo update-alternatives --install "/usr/bin/mvn" "mvn" "/opt/apache-maven-3.6.1/bin/mvn" 0
+   sudo update-alternatives --set mvn /opt/apache-maven-3.6.1/bin/mvn
+
+
+*Configuración variable de entorno M2_HOME en Linux deppin 15*
+
+Editamos el archivo .profile ubicado en el home agregando las siguientes lineas correspondientes a maven, asumiendo que 
+tenemos en este mismo archivo las variables de entorno de java
+
+    export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2
+    export M2_HOME=/opt/apache-maven-3.6.1
+    export PATH=$HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+
+Guardar cambios y modificar cambiar los permiso del archivo  y agregar al source para establecer como variable de entorno
+tecleamos el siguiente comando
+
+    source .profile
+    
+Para comprovar
+    mvn --version
+    
+Resultado
+    Picked up _JAVA_OPTIONS:   -Dawt.useSystemAAFontSettings=gasp
+    Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-04T14:00:29-05:00)
+    Maven home: /opt/apache-maven-3.6.1
+    Java version: 11.0.2, vendor: Oracle Corporation, runtime: /usr/lib/jvm/jdk-11.0.2
+    Default locale: es_ES, platform encoding: UTF-8
+    OS name: "linux", version: "4.15.0-29deepin-generic", arch: "amd64", family: "unix"
